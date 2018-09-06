@@ -1,10 +1,12 @@
 #@author: Richard Anemam
 #Date: Sep 6, 2018
+#Entirely based on Norvig's spell checker
 # To a better understanding:
 #[0]: https://en.wikipedia.org/wiki/Levenshtein_distance
 #[1]: Search for Norvig's spell checker
 #[2]: Norvig's spell checker in Haskell by Richard Anemam & Juliane Cunha - Code & Tutorial (https://github.com/richardanemam/paradgmas-de-programa-ao)
 
+#Final considerations: apply sentiment analysis. Check https://github.com/richardanemam/twitter-sentment-analysys-npl out for a better understanding
 
 import re
 from collections import Counter
@@ -58,8 +60,6 @@ def edits2(word):
 if __name__ == '__main__':
     # Testes
     while True:
+
         word = input("\nType your sentence: ")
         print (itDoesEverything(word))
-
-        #print("{}".format( correction(word) ) )
-
